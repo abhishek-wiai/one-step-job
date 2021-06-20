@@ -7,4 +7,4 @@ and show her relevant jobs in a Tinder like UI
 - Swipe Up to Apply
 - Swipe Up to Save Job for later
 
-__Please Note:__ The job entries are hardcoded at repository layer for now, but can be replaced easily with an actual API/DB implementation very easily
+__Please Note:__ This prototype has mock entries and flows to demosntrate UI functionalities but was written in a manner to be easily transformed into a fully functional app with API and Db integrations with least amount of redundant effort.
