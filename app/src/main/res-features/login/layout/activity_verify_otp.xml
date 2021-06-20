@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="viewModel"
+                  type="org.om.onestepjob.ui.login.otp.VerifyOtpViewModel"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar.Light"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_mobile_no_otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@{@string/verify_otp_prompt(viewModel.mobileNumber)}"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            <com.alimuzaffar.lib.pin.PinEntryEditText
+                    android:id="@+id/edit_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="32dp"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:text="@={viewModel.enteredPin}"
+                    android:textIsSelectable="false"
+                    app:pinBackgroundDrawable="@drawable/bg_pin"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_resend"
+                    android:theme="@style/AppTheme.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.resendOtp()}"
+                    android:text="@string/verify_otp_resend" />
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_verify_otp"
+                    android:theme="@style/AppTheme.Button.Light"
+                    android:layout_width="0dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_weight="2"
+                    android:enabled="false"
+                    android:layout_marginLeft="8dp"
+                    android:onClick="@{() -> viewModel.verifyOtp()}"
+                    android:text="@string/verify_otp_and_login" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

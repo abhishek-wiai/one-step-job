@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="viewModel"
+                type="org.om.onestepjob.ui.home.HomeViewModel"/>
+    </data>
+    <FrameLayout
+            android:id="@+id/container_stack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/msg_no_jobs"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="gone"
+                android:gravity="center"/>
+
+        <com.yuyakaido.android.cardstackview.CardStackView
+                android:id="@+id/card_stack_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:padding="4dp"
+                android:clipToPadding="false">
+        </com.yuyakaido.android.cardstackview.CardStackView>
+    </FrameLayout>
+</layout>

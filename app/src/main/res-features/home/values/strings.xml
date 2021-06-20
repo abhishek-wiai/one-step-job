@@ -1,0 +1,14 @@
+<resources>
+    <string name="menu_new">New</string>
+    <string name="menu_saved">Saved</string>
+    <string name="menu_applied">Applied</string>
+    <string name="msg_loading_jobs">Finding the best jobs for you</string>
+    <string name="label_title">Title:</string>
+    <string name="label_company">Company:</string>
+    <string name="label_experience">Experience:</string>
+    <string name="label_ctc">CTC:</string>
+    <string name="label_location">Location:</string>
+    <string name="msg_no_jobs">No Jobs</string>
+
+
+</resources>

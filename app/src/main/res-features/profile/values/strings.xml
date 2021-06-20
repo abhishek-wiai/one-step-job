@@ -1,0 +1,5 @@
+<resources>
+    <string name="label_tell_us">Tell us about yourself</string>
+    <string name="hint_tell_us">e.g. I am Uma. Working as an associate at IBM) [250 char limit]</string>
+    <string name="btn_get_jobs">Get me Jobs</string>
+</resources>

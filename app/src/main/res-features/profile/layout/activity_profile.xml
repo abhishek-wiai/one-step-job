@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="org.om.onestepjob.ui.profile.ProfileViewModel" />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/label_tell_us"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_tell_us"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/colorAccent"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxStrokeColor="@color/colorPrimaryDark"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="@integer/tell_us_max_length"
+                    app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_tell_us"
+                        android:layout_width="280dp"
+                        android:layout_height="240dp"
+                        android:gravity="top"
+                        android:hint="@string/hint_tell_us"
+                        android:inputType="textLongMessage|textMultiLine"
+                        android:textColor="@color/colorPrimaryDark" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_get_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_margin="16dp"
+                android:enabled="false"
+                android:text="@string/btn_get_jobs"
+                android:theme="@style/AppTheme.Button" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,15 @@
+// For organizing resources better
+// Ref: https://proandroiddev.com/organising-android-resources-with-gradle-and-kotlin-26df1413d7ff
+ext {
+    resourceFeatures = [
+            "src/main/res-features/splash",
+            "src/main/res-features/login",
+            "src/main/res-features/profile",
+            "src/main/res-features/home",
+            "src/main/res-features/home/stacked",
+            "src/main/res-features/home/list"
+
+    ]
+
+}
+

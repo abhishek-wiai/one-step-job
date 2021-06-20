@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="job"
+                type="org.om.onestepjob.model.Job" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+            <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@{job.title}"
+                    android:textAppearance="?textAppearanceHeadline4"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/text_label_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_company"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/text_company"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@{job.company}"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textColor="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/text_label_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_location"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/text_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@{job.location}"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textColor="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/text_label_ctc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_ctc"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/text_ctc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@{job.ctc}"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textColor="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/text_label_exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_experience"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/text_exp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:text="@{job.experience}"
+                        android:textColor="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="login_mobile_no_hint">Mobile No.</string>
+    <string name="login_ccp_master_country_list" translatable="false">IN</string>
+    <string name="login_with_otp">Login/SignUp</string>
+    <string name="login_skip">Skip</string>
+    <string name="login_mobile_no_error">Enter a valid Mobile No.</string>
+    <string name="title_verify_otp">Verify OTP</string>
+    <string name="verify_otp_and_login">Verify OTP and Login</string>
+    <string name="verify_otp_resend">Resend OTP</string>
+    <string name="verify_otp_prompt">Please enter below the OTP sent to Mobile No. %s</string>
+    <string name="msg_sending_otp">Sending OTP</string>
+    <string name="snack_otp_sent">OTP was sent to your mobile number</string>
+</resources>

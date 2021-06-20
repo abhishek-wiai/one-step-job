@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="org.om.onestepjob.ui.login.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="40dp" />
+
+            <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_icon"
+                    android:tint="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_arrowColor="@color/colorPrimaryDark"
+                    app:ccp_customMasterCountries="@string/login_ccp_master_country_list"
+                    app:ccp_textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_mobile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/login_mobile_no_hint"
+                    android:orientation="horizontal"
+                    app:boxStrokeColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_skip"
+                    android:theme="@style/AppTheme.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/login_skip"
+                    android:onClick="@{() -> viewModel.openProfile()}"
+                    />
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_login_otp"
+                    android:theme="@style/AppTheme.Button.Light"
+                    android:layout_width="0dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/login_with_otp"
+                    />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
