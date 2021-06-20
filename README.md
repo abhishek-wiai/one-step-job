@@ -1,5 +1,7 @@
 # one-step-job
 One Step Job
+
+
 A quick prototype and starter code for a friend's startup idea (which he dropped :)).
 Idea was to create a job search app which will take one line introduction from the candidate
 and show her relevant jobs in a Tinder like UI 
